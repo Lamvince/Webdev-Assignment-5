@@ -1,0 +1,88 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a, h1 {
+  color: white;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgba(33,36,41,255);
+  background-size: 200vw;
+  background-image: linear-gradient(to right, 
+    rgba(33,36,41,0.85), 
+      rgba(33,36,41,25) 30vw), 
+      url("/img/steam-library-update-2.png");
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: 33% 34% 33%;
+  grid-template-rows: 10% 50% 40%;
+  color: lightgrey;
+}
+
+#formPanel {
+  grid-column: 2;
+  grid-row: 2;
+  background-image: linear-gradient(to top right, 
+    rgba(33,36,41,25), 
+    rgba(33,37,42,255) 50%, 
+    rgba(44,48,55,255) 99%);
+}
+
+#loginForm {
+  text-align: center;
+}
+
+#loginForm > input {
+  font-size: 1.1em;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1em;
+  outline: none;
+  border: none;
+  text-align: center;
+  color: white;
+  padding: 0.4em;
+  background-color: rgba(50,53,60,255);
+}
+
+#loginForm > input[type="button"] {
+  background-image: linear-gradient(to right, rgba(61,163,241,255), rgba(37,97,209,255));
+  color: lightgrey;
+  cursor: pointer;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+#errorMsg {
+  color: red;
+}
+
+@media only screen and (min-width: 551px) and (max-width: 650px) {
+  #formPanel {
+    grid-column: 1 / span 3;
+    background-image: linear-gradient(to top right, 
+    transparent, 
+    rgba(33,37,42,255) 50%, 
+    rgba(44,48,55,255) 99%);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  body {
+    background-size: 200vh;
+  }
+
+  #formPanel {
+    grid-column: 1 / span 3;
+    background-image: linear-gradient(to top right, 
+    transparent, 
+    rgba(33,37,42,255) 50%, 
+    rgba(44,48,55,255) 99%);
+  }
+}
